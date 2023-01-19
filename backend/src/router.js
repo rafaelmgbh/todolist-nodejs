@@ -9,4 +9,6 @@ router.post('/tasks', tasksMiddleware.validateBody, tasksController.createTask)
 
 router.delete('/tasks/:id', tasksController.deleteTask)
 
+router.put('/tasks/:id', tasksController.updatedTask)
+
 module.exports = router;

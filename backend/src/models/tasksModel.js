@@ -20,10 +20,19 @@ const getAll = async () => {
 
  };
 
+ const updateTask = async (id, task) => {
+
+    const { title, status } = task;  
+    const [updatedTask] = await connection.execute('UPDATE tasks SET title = ?, status = ? WHERE id = ?', [title, status, id]);
+    return updatedTask;
+
+ };
+
 
 
 module.exports = {
     getAll,
     createTask,
-    deleteTask
+    deleteTask,
+    updateTask
 };
