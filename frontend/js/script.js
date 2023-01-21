@@ -67,9 +67,9 @@ const createElement = (tag, innerText = '', innerHTML = '') => {
 
 const createSelect = (value) => {
   const options = `
-    <option value="pendente">pendente</option>
-    <option value="em andamento">em andamento</option>
-    <option value="concluída">concluída</option>
+    <option value="Pendente">Pendente</option>
+    <option value="Em andamento">Em andamento</option>
+    <option value="Concluída">Concluída</option>
   `;
 
   const select = createElement('select', '', options);
